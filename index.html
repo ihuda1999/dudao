@@ -1,13 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>现场管理督办</title>
+    <meta name="description" content="现场管理督办系统 - 工单创建与数据查看" />
+    <meta name="theme-color" content="#dc2626" />
+    <style>
+      /* 内联骨架屏样式，避免闪烁 */
+      .app-skeleton{max-width:42rem;margin:0 auto;padding:1rem}
+      @media(min-width:768px){.app-skeleton{padding:2rem}}
+      .sk-card{background:#fff;border-radius:16px;padding:1.25rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 2px rgba(0,0,0,.05);border:1px solid #f3f4f6}
+      .sk-left{display:flex;align-items:center;gap:1rem}
+      .sk-circle{width:48px;height:48px;border-radius:50%;background:#f3f4f6;animation:pulse 1.5s ease-in-out infinite}
+      .sk-lines{display:flex;flex-direction:column;gap:6px}
+      .sk-line{height:14px;border-radius:4px;background:#f3f4f6;animation:pulse 1.5s ease-in-out infinite}
+      .sk-line.w24{width:96px}.sk-line.w16{width:64px}
+      .sk-btn{width:72px;height:32px;border-radius:9999px;background:#f3f4f6;animation:pulse 1.5s ease-in-out infinite}
+      @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="app-skeleton" style="min-height:100vh;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,sans-serif">
+        <div class="sk-card"><div class="sk-left"><div class="sk-circle"></div><div class="sk-lines"><div class="sk-line w24"></div><div class="sk-line w16"></div></div></div><div class="sk-btn"></div></div>
+        <div class="sk-card"><div class="sk-left"><div class="sk-circle"></div><div class="sk-lines"><div class="sk-line w24"></div><div class="sk-line w16"></div></div></div><div class="sk-btn"></div></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
